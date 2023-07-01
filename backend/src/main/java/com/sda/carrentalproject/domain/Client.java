@@ -32,7 +32,7 @@ public class Client {
     private String address;
 
     private boolean hasDrivingLicense;
-
+// TODO: provide better way of handling
     private LocalDateTime registrationDateTime;
 
     private LocalDate dateOfBirth;
