@@ -1,7 +1,6 @@
 Requirements:
-- BE module
-- FE module
 - client db / car db
+  - Name, surname, phone, email, address, driver licence provided (yes/no), primary key, etc
   - list clients
   - insurance for car
   - register client
@@ -14,7 +13,6 @@ Requirements:
   - choose a period of time (based on calendar)
   - client agree to terms
   - pay when collect
-  - Name, surname, phone, email, address, driver licence provided (yes/no), primary key, etc
   - save rentals to db
 - registration page + login
   - client registration
@@ -35,3 +33,8 @@ Requirements:
   - payment options available for clients
   - pay on collect would remove the need to have separate page though
 - one of those pop-up windows when users starts scrolling back up
+
+
+Done:
+- BE module
+- FE module
