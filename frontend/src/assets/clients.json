@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "mariusz",
+    "surname": "p",
+    "phone": "555-555-555",
+    "email": "mp@gmail.com",
+    "address": "poland",
+    "hasDrivingLicense": false,
+    "registrationDateTime": "2023-07-02T10:37:41.236961",
+    "dateOfBirth": "1990-01-07"
+  }
+]
