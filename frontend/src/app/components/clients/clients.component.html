@@ -75,7 +75,7 @@
 </div>
 
 <div>
-  <form [formGroup]="clientForm">
+  <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
     <label for="name">Name:</label>
     <input formControlName="name" type="text" id="name">
 
