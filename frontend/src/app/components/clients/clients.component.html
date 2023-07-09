@@ -97,7 +97,7 @@
     <label for="dateOfBirth">Date of birth:</label>
     <input formControlName="dateOfBirth" type="text" id="dateOfBirth">
 
-    <button type="submit" mat-flat-button color="warn">Submit</button>
+    <button [disabled]="!clientForm.valid" type="submit" mat-flat-button color="warn">Submit</button>
   </form>
   <br>
   <p>Form value: {{ clientForm.value | json }}</p>
