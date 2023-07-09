@@ -94,16 +94,15 @@
     <label for="hasDrivingLicense">Has driving license:</label>
     <input formControlName="hasDrivingLicense" type="text" id="hasDrivingLicense">
 
-    <label for="registrationDateTime">Registration date time:</label>
-    <input formControlName="registrationDateTime" type="text" id="registrationDateTime">
-
     <label for="dateOfBirth">Date of birth:</label>
     <input formControlName="dateOfBirth" type="text" id="dateOfBirth">
 
     <button type="submit" mat-flat-button color="warn">Submit</button>
   </form>
-
+  <br>
   <p>Form value: {{ clientForm.value | json }}</p>
+  <br>
+  <p>Form status: {{ clientForm.status }}</p>
 
 </div>
 
