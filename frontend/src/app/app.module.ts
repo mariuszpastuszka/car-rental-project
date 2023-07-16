@@ -17,8 +17,9 @@ import {RouterModule, RouterOutlet} from "@angular/router";
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
-import {clientsPageUrl, homePageUrl, notFoundPageUrl} from "./models/links";
+import {clientsPageUrl, homePageUrl, loginPageUrl, notFoundPageUrl} from "./models/links";
 import {ReactiveFormsModule} from "@angular/forms";
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     NavigationBarComponent,
     HomePageComponent,
     NotFoundPageComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     RouterModule.forRoot([
       {path: homePageUrl, component: HomePageComponent},
       {path: clientsPageUrl, component: ClientsComponent},
+      {path: loginPageUrl, component: LoginComponent},
       {path: notFoundPageUrl, component: NotFoundPageComponent}
     ]),
     MatIconModule,
