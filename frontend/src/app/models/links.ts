@@ -7,4 +7,5 @@ export const createClientUrl = `${serverUrl}/api/clients`
 export const homePageUrl = ''
 export const clientsPageUrl = 'clients'
 export const loginPageUrl = 'login'
+export const carsPageUrl = 'cars'
 export const notFoundPageUrl = '**'
