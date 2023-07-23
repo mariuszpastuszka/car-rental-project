@@ -4,6 +4,7 @@ import com.sda.carrentalproject.dto.CarDto;
 import com.sda.carrentalproject.mapper.CarMapper;
 import com.sda.carrentalproject.service.CarService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,9 +29,12 @@ public class CarController {
 
     // /cars?available=true?color=blue
     @GetMapping("/cars")
-    public List<CarDto> getCars(@RequestParam Map<String, String> queryParams) {
+    public List<CarDto> getCars(@RequestParam Map<String, String> queryParams,
+                                Pageable pageable) {
         log.info("getting cars");
         log.info("query params: {}", queryParams);
+        log.info("paging parameters: [{}]", pageable);
+
         return carService.findCarsBasedOnQueryParameters(queryParams)
                 .stream()
                 .map(car -> carMapper.fromEntityToDto(car))
