@@ -22,6 +22,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './components/login/login.component';
 import { CarsComponent } from './components/cars/cars.component';
 import {authGuard} from "./services/login-service/login.service";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {authGuard} from "./services/login-service/login.service";
     ]),
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
