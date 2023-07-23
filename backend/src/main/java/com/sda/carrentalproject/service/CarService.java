@@ -6,6 +6,9 @@ import com.sda.carrentalproject.repository.CarRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
+import java.util.List;
+
 @Service
 @Slf4j
 public class CarService {
@@ -41,5 +44,23 @@ public class CarService {
                     return car;
                 })
                 .orElseThrow(() -> new WrongCarIdException("Car with given id: [%s] is unavailable!".formatted(id)));
+    }
+
+    public List<Car> findAllCars() {
+        log.info("trying to find all cars");
+        var allCars = carRepository.findAll();
+        log.info("number of all cars: [{}]", allCars.size());
+        log.debug("all cars: {}", allCars);
+
+        return allCars;
+    }
+
+    public List<Car> findAllCarsAvailableForBooking() {
+        log.info("trying to find all cars available for booking");
+        var availableCars = carRepository.findAllAndAvailableTrue();
+        log.info("number of available cars: [{}]", availableCars.size());
+        log.debug("available cars: {}", availableCars);
+
+        return availableCars;
     }
 }
