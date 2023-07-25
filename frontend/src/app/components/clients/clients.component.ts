@@ -40,7 +40,6 @@ export class ClientsComponent implements OnInit, AfterViewInit {
     private clientService: ClientService
   ) {
     this.dataSource = new MatTableDataSource(this.clients);
-    console.log('inside clients component constructor');
   }
 
   get name() {
@@ -97,7 +96,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
     console.log(`data to send: ${JSON.stringify(this.clientForm.value, null, 2)}`);
 
     this.clientService.createClient(this.clientForm.value as Client)
-      .subscribe(value => {
+      .subscribe(_ => {
         this.clientForm.reset();
         this.fetchClients();
       });

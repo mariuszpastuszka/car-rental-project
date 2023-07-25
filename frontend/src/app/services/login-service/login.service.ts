@@ -22,9 +22,7 @@ export class LoginService {
   }
 
   isAdmin(): boolean {
-    // return this.userRole === adminRole;
-    // TODO: temporal change
-    return true;
+    return this.userRole === adminRole;
   }
 
   login(userLogin: string, pass: string): Observable<boolean> {
